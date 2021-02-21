@@ -1,0 +1,30 @@
+{
+  "name": "unional/jsonc",
+  "description": "jsonc library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "unional",
+      "email": "homawong@gmail.com"
+    }
+  ],
+  "scripts": {
+    "test": "phpunit"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "files": [
+      "php/jsonc_decode.php"
+    ],
+    "psr-4": {
+      "Unional\\Jsonc\\": [
+        "php",
+        "test"
+      ]
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
