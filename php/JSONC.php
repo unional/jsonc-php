@@ -14,10 +14,10 @@ final class JSONC
   }
   private static function removeBlockComments($json)
   {
-    return $json;
+    return preg_replace('#/\*.+?\*/#s', "", $json);
   }
   private static function removeLineComments($json)
   {
-    return $json;
+    return preg_replace('#//.+?\n#s', "",  $json);
   }
 }

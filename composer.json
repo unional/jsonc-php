@@ -1,6 +1,7 @@
 {
   "name": "unional/jsonc",
   "description": "jsonc library",
+  "version": "0.0.1",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -14,9 +15,6 @@
   },
   "minimum-stability": "stable",
   "autoload": {
-    "files": [
-      "php/jsonc_decode.php"
-    ],
     "psr-4": {
       "Unional\\Jsonc\\": [
         "php",
