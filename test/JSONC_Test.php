@@ -69,4 +69,18 @@ class JSONC_Test extends TestCase
       1
     }', true));
   }
+  public function test_decode_with_url_string()
+  {
+    $a = JSONC::decode('{
+      "a": "http://json-schema.org/draft-07/schema"
+    }', true);
+    $this->assertEquals(["a" => "http://json-schema.org/draft-07/schema"], $a);
+  }
+  public function test_decode_string_with_block_comment()
+  {
+    $a = JSONC::decode('{
+      "a": "a /* not comment */ b"
+    }', true);
+    $this->assertEquals(["a" => "a /* not comment */ b"], $a);
+  }
 }

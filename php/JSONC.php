@@ -9,15 +9,15 @@ final class JSONC
    */
   final public static function decode($json, $assoc = false, $depth = 512, $options = 0)
   {
-    $trimmed = self::removeLineComments(self::removeBlockComments($json));
+    $trimmed = self::removeComments($json);
+    echo "trimmed: " . $trimmed;
     return json_decode($trimmed, $assoc, $depth, $options);
   }
-  private static function removeBlockComments($json)
+  private static function removeComments($json)
   {
-    return preg_replace('#/\*.+?\*/#s', "", $json);
-  }
-  private static function removeLineComments($json)
-  {
-    return preg_replace('#//.+?\n#s', "",  $json);
+    // <https://stackoverflow.com/questions/8148797/a-json-parser-for-php-that-supports-comments>
+    return  preg_replace('~
+    (" (?:[^"\\\\] | \\\\\\\\ | \\\\")*+ ") | \# [^\v]*+ | // [^\v]*+ | /\* .*? \*/
+  ~xs', '$1', $json);
   }
 }
