@@ -7,6 +7,6 @@
 .pnp.js linguist-vendored
 
 # Exclude files in composer distribution
-/.* export-ignore
-/test export-ignore
-/phpunit.xml export-ignore
+/.*               export-ignore
+/test             export-ignore
+/phpunit.xml      export-ignore
