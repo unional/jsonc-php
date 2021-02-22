@@ -11,7 +11,7 @@ composer require unional/jsonc
 ## usage
 
 ```php
-use unional\jsonc;
+use Unional\Jsonc\JSONC;
 
 echo JSONC::decode('{ /* comment */"a": 1 }');
 ```

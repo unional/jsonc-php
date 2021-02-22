@@ -16,7 +16,7 @@ final class JSONC
   {
     // <https://stackoverflow.com/questions/8148797/a-json-parser-for-php-that-supports-comments>
     return  preg_replace('~
-    (" (?:[^"\\\\] | \\\\\\\\ | \\\\")*+ ") | // [^\v]*+ | /\* .*? \*/
+    (" (?:\\\\. | [^"])*+ ") | \# [^\v]*+ | // [^\v]*+ | /\* .*? \*/
   ~xs', '$1', $json);
   }
 }
