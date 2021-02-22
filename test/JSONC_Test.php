@@ -83,4 +83,11 @@ class JSONC_Test extends TestCase
     }', true);
     $this->assertEquals(["a" => "a /* not comment */ b"], $a);
   }
+  public function test_decode_support_pound_comment()
+  {
+    $this->assertEquals(["a" => 1], JSONC::decode('{
+      # some comment
+      "a": 1
+    }', true));
+  }
 }
