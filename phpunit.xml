@@ -1,12 +1,25 @@
-<phpunit>
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  cacheResultFile=".php/phpunit.result.cache"
+  colors="true"
+  xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd">
+  <coverage>
+    <include>
+      <directory suffix=".php">php</directory>
+    </include>
+    <exclude>
+      <directory suffix="_Test.php">test</directory>
+    </exclude>
+    <report>
+      <html outputDirectory=".php/coverage"/>
+      <text outputFile="php://stdout"
+        showOnlySummary="true"/>
+    </report>
+  </coverage>
   <testsuites>
     <testsuite name="unit">
       <directory suffix="_Test.php">test</directory>
     </testsuite>
   </testsuites>
-  <coverage>
-    <exclude>
-      <directory suffix="_Test.php">test</directory>
-    </exclude>
-  </coverage>
+  <logging/>
 </phpunit>

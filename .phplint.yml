@@ -1,0 +1,7 @@
+path:
+  - ./php
+cache: .php/phplint.cache
+extensions:
+  - php
+exclude:
+  - vendor
