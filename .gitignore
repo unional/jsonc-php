@@ -43,6 +43,7 @@ build/Release
 
 # cache directory
 .npm
+.php
 .yarn
 *.cache
 
