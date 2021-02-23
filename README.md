@@ -1,5 +1,7 @@
 # jsonc-php
 
+[![Latest Stable Version](https://poser.pugx.org/unional/jsonc/v)](//packagist.org/packages/unional/jsonc) [![Total Downloads](https://poser.pugx.org/unional/jsonc/downloads)](//packagist.org/packages/unional/jsonc) [![Latest Unstable Version](https://poser.pugx.org/unional/jsonc/v/unstable)](//packagist.org/packages/unional/jsonc) [![License](https://poser.pugx.org/unional/jsonc/license)](//packagist.org/packages/unional/jsonc)
+
 PHP jsonc support.
 
 ## install
